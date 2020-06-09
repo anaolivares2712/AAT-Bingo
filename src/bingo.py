@@ -45,3 +45,15 @@ def entre_1_y_90(carton):
             if carton[i][j] < 0 or carton[i][j] > 90:
                 return 1
     return 0
+
+def aumentan_hacia_la_derecha(carton):
+    for i in range(3):
+        izq = 0
+        der = 10
+        for j in range(9):
+            if carton[i][j] != 0:
+                if (carton[i][j] < izq or carton[i][j] > der):
+                    return 1
+            izq += 10
+            der += 10
+    return 0
