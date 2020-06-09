@@ -38,3 +38,10 @@ def elementos_filas(carton):
                 cont += 1
                 break
     return cont
+
+def entre_1_y_90(carton):
+    for i in range(3):
+        for j in range(9):
+            if carton[i][j] < 0 or carton[i][j] > 90:
+                return 1
+    return 0
