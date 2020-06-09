@@ -21,3 +21,11 @@ def test_aumenta_hacia_abajo():
         (0,18,25,0,44,57,64,76,0)
     )
     assert aumentan_hacia_abajo(mi_carton2) == 0
+
+def test_numeros_unicos():
+    mi_carton2 = (
+        (3,0,22,0,41,52,0,0,89),
+        (7,12,0,38,0,0,0,73,0),
+        (0,18,25,0,44,57,64,76,0)
+    )
+    assert numeros_unicos(mi_carton2) == 0

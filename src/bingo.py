@@ -76,3 +76,14 @@ def aumentan_hacia_abajo(carton):
                     if segundo > tercero:
                         return 1
     return 0
+
+def numeros_unicos(carton):
+    aux = []
+    for i in range(3):
+        for j in range(9):
+            celda = carton[i][j]
+            if celda != 0:
+                aux.append(celda)
+                if aux.count(celda) > 1:
+                    return 1
+    return 0
