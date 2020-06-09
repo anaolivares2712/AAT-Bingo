@@ -57,3 +57,22 @@ def aumentan_hacia_la_derecha(carton):
             izq += 10
             der += 10
     return 0
+
+def aumentan_hacia_abajo(carton):
+    for j in range(9):
+        primero = carton[0][j]
+        segundo = carton[1][j]
+        tercero = carton[2][j]
+        if primero != 0:
+            if segundo != 0:
+                if primero > segundo:
+                    return 1
+        if primero != 0:
+            if tercero != 0:
+                if primero > tercero:
+                        return 1
+        if segundo != 0:
+            if tercero != 0:
+                    if segundo > tercero:
+                        return 1
+    return 0
