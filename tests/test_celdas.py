@@ -1,5 +1,8 @@
 from src.bingo import carton
-from src.bingo import *
+from src.bingo import no_mas_15
+from src.bingo import no_menos_15
+from src.bingo import elementos_columnas
+from src.bingo import elementos_filas
 
 mi_carton = carton()
 
