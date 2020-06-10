@@ -39,3 +39,8 @@ def test_numeros_unicos():
 def test_cant_celdas_ocupadas():
     assert cant_celdas_ocupadas(mi_carton) == 0
 
+def test_matriz():
+    assert matriz(mi_carton) == 0
+
+def test_columnas_tres_celdas_ocupadas():
+    assert columnas_tres_celdas_ocupadas(mi_carton) == 0
