@@ -132,3 +132,16 @@ def celdas_vacias_consecutivas(carton):
                 cont = 0
         cont = 0 
     return 0
+
+def celdas_ocupadas_consecutivas(carton):
+    cont = 0
+    for i in range(3):
+        for j in range(9):
+            if carton[i][j] != 0:
+                cont += 1
+                if cont > 2:
+                    return 1
+            else:
+                cont = 0
+        cont = 0
+    return 0
