@@ -3,6 +3,7 @@ from src.bingo import entre_1_y_90
 from src.bingo import aumentan_hacia_abajo
 from src.bingo import aumentan_hacia_la_derecha
 from src.bingo import numeros_unicos
+from src.bingo import cant_celdas_ocupadas
 
 mi_carton = carton()
 
@@ -32,3 +33,6 @@ def test_numeros_unicos():
         (0,18,25,0,44,57,64,76,0)
     )
     assert numeros_unicos(mi_carton2) == 0
+
+def test_cant_celdas_ocupadas():
+    assert cant_celdas_ocupadas(mi_carton) == 0

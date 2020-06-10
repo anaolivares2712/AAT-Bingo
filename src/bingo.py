@@ -9,7 +9,7 @@ def carton():
     )
     return carton
 
-def no_menos_15(carton): #Hice un cambio
+def no_menos_15(carton):
     cont = 0
     for fila in carton:
         for celda in fila:
@@ -17,7 +17,7 @@ def no_menos_15(carton): #Hice un cambio
                 cont += 1
     return cont
 
-def no_mas_15(carton): #Hice un cambio
+def no_mas_15(carton):
     cont = 0
     for fila in carton:
         for celda in fila:
@@ -25,7 +25,7 @@ def no_mas_15(carton): #Hice un cambio
                 cont += 1
     return cont
 
-def elementos_columnas(carton): #Hice un cambio
+def elementos_columnas(carton):
     cont = 0
     for i in range(9):
         if(carton[0][i] != 0 or carton[1][i] != 0 or carton[2][i] != 0):
@@ -88,4 +88,16 @@ def numeros_unicos(carton):
                 aux.append(celda)
                 if aux.count(celda) > 1:
                     return 1
+    return 0
+
+def cant_celdas_ocupadas(carton):
+    cont = 0
+    for i in range(3):
+        for j in range(9):
+            if carton[i][j] != 0:
+                cont += 1
+        if cont > 5:
+            return 1
+        else:
+            cont = 0
     return 0
