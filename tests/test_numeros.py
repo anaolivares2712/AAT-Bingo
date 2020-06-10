@@ -5,6 +5,7 @@ from src.bingo import aumentan_hacia_la_derecha
 from src.bingo import numeros_unicos
 from src.bingo import cant_celdas_ocupadas
 from src.bingo import matriz
+from src.bingo import columnas_tres_celdas_ocupadas
 
 mi_carton = carton()
 

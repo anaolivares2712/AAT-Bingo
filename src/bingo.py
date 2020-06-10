@@ -113,3 +113,9 @@ def matriz(carton):
                 return 1
         cont_columnas = 0
     return 0
+
+def columnas_tres_celdas_ocupadas(carton):
+    for i in range(9):
+        if(carton[0][i] != 0 and carton[1][i] != 0 and carton[2][i] != 0):
+            return 1
+    return 0
