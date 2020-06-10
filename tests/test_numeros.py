@@ -4,6 +4,7 @@ from src.bingo import aumentan_hacia_abajo
 from src.bingo import aumentan_hacia_la_derecha
 from src.bingo import numeros_unicos
 from src.bingo import cant_celdas_ocupadas
+from src.bingo import matriz
 
 mi_carton = carton()
 
@@ -36,3 +37,4 @@ def test_numeros_unicos():
 
 def test_cant_celdas_ocupadas():
     assert cant_celdas_ocupadas(mi_carton) == 0
+

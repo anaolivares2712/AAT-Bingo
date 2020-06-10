@@ -101,3 +101,15 @@ def cant_celdas_ocupadas(carton):
         else:
             cont = 0
     return 0
+
+def matriz(carton):
+    cont_filas = 0
+    cont_columnas = 0
+    for fila in carton:
+        cont_filas += 1
+        for celda in fila:
+            cont_columnas += 1
+            if cont_columnas > 9:
+                return 1
+        cont_columnas = 0
+    return 0
