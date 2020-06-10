@@ -1,5 +1,8 @@
 from src.bingo import carton
-from src.bingo import *
+from src.bingo import entre_1_y_90
+from src.bingo import aumentan_hacia_abajo
+from src.bingo import aumentan_hacia_la_derecha
+from src.bingo import numeros_unicos
 
 mi_carton = carton()
 
