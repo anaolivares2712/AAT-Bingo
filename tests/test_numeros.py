@@ -6,6 +6,8 @@ from src.bingo import numeros_unicos
 from src.bingo import cant_celdas_ocupadas
 from src.bingo import matriz
 from src.bingo import columnas_tres_celdas_ocupadas
+from src.bingo import celdas_vacias_consecutivas
+
 
 mi_carton = carton()
 
@@ -44,3 +46,6 @@ def test_matriz():
 
 def test_columnas_tres_celdas_ocupadas():
     assert columnas_tres_celdas_ocupadas(mi_carton) == 0
+
+def test_celdas_vacias_consecutivas():
+    assert celdas_vacias_consecutivas(mi_carton) == 0

@@ -119,3 +119,16 @@ def columnas_tres_celdas_ocupadas(carton):
         if(carton[0][i] != 0 and carton[1][i] != 0 and carton[2][i] != 0):
             return 1
     return 0
+
+def celdas_vacias_consecutivas(carton):
+    cont = 0
+    for i in range(3):
+        for j in range(9):
+            if carton[i][j] == 0:
+                cont += 1
+                if cont > 2:
+                    return 1
+            else:
+                cont = 0
+        cont = 0 
+    return 0
