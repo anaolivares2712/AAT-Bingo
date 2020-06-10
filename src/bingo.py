@@ -9,32 +9,34 @@ def carton():
     )
     return carton
 
-def no_menos_15(carton):
+def no_menos_15(carton): #Hice un cambio
     cont = 0
     for fila in carton:
         for celda in fila:
-            cont += celda
+            if celda != 0:
+                cont += 1
     return cont
 
-def no_mas_15(carton):
+def no_mas_15(carton): #Hice un cambio
     cont = 0
     for fila in carton:
         for celda in fila:
-            cont += celda
+            if celda != 0:
+                cont += 1
     return cont
 
-def elementos_columnas(carton):
+def elementos_columnas(carton): #Hice un cambio
     cont = 0
     for i in range(9):
-        if(carton[0][i] == 1 or carton[1][i] == 1 or carton[2][i] == 1):
+        if(carton[0][i] != 0 or carton[1][i] != 0 or carton[2][i] != 0):
             cont += 1
     return cont
 
-def elementos_filas(carton):
+def elementos_filas(carton): #Hice un cambio
     cont = 0
     for i in range(3):
         for j in range(9):
-            if carton[i][j] == 1:
+            if carton[i][j] != 0:
                 cont += 1
                 break
     return cont
