@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/anaolivares2712/AAT-Bingo.svg?branch=master)](https://travis-ci.org/anaolivares2712/AAT-Bingo)
-
 # Bingo
 Proyecto para la materia de Adaptación al Ambiente de Trabajo del Instituto Politécnico Superior Gral. San Martín.
 Consiste en un generador de cartones de bingo programado en `Python 3`.
