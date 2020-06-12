@@ -36,3 +36,8 @@ Una vez instalado se pueden ejecutar los test con el comando:
 pytest
 ```
 ## Ejemplo de salida:
+```
+[2, 0, 27, 0, 43, 0, 61, 74, 0]
+[0, 14, 29, 0, 49, 54, 0, 79, 0]
+[0, 19, 0, 32, 0, 57, 62, 0, 88]
+```
