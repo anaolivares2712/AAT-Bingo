@@ -2,7 +2,7 @@
 
 # Bingo
 Proyecto para la materia de Adaptación al Ambiente de Trabajo del Instituto Politécnico Superior Gral. San Martín.
-Consiste en un generador de cartones de bingo programado en Python 3.
+Consiste en un generador de cartones de bingo programado en `Python 3`.
 ## Reglas 
 El cartón que genera cumple con las siguientes reglas:
 * Los números del carton se encuentran en el rango 1 a 90.
