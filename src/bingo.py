@@ -1,6 +1,3 @@
-# Los ceros representan celdas vacías
-# Los unos representan celdas ocupadas
-
 import random
 import math
 
