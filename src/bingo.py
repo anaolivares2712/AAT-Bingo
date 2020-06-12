@@ -1,12 +1,63 @@
 # Los ceros representan celdas vacías
 # Los unos representan celdas ocupadas
 
-def carton():
-    carton = (
-        (1,0,1,0,1,0,1,0,1),
-        (0,1,0,1,1,0,0,1,1),
-        (1,1,0,1,0,1,0,1,0)
-    )
+import random
+import math
+
+def nuevo_carton():
+    cont = 0
+
+    carton = [
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0]
+    ]
+    numeros_carton = 0
+
+    while numeros_carton < 15:
+        cont += 1
+        if cont == 50 :
+            return nuevo_carton()
+        numero = random.randint(1, 90)
+
+        columna = math.floor(numero / 10)
+        if columna == 9:
+            columna = 8
+        huecos = 0
+        for i in range(3):
+            if carton[i][columna] == 0:
+                huecos += 1
+            if carton[i][columna] == numero:
+                huecos = 0
+                break
+        if(huecos < 2):
+            continue
+
+        fila = 0
+        for j in range(3):
+            huecos = 0
+            for i in range(9):
+                if carton[fila][i] == 0:
+                    huecos += 1
+            if huecos < 5 or carton[fila][columna] != 0:
+                fila += 1
+            else:
+                break
+        if fila == 3:
+            continue
+
+        carton[fila][columna] = numero
+        numeros_carton += 1
+        cont = 0
+
+    for x in range(9):
+        huecos = 0
+        for y in range(3):
+            if carton[y][x] == 0:
+                huecos += 1
+        if huecos == 3:
+            return nuevo_carton()
+
     return carton
 
 def no_menos_15(carton):
