@@ -1,4 +1,4 @@
-from src.bingo import carton
+from src.bingo import nuevo_carton
 from src.bingo import entre_1_y_90
 from src.bingo import aumentan_hacia_abajo
 from src.bingo import aumentan_hacia_la_derecha
@@ -9,7 +9,7 @@ from src.bingo import columnas_tres_celdas_ocupadas
 from src.bingo import celdas_vacias_consecutivas
 from src.bingo import celdas_ocupadas_consecutivas
 
-mi_carton = carton()
+mi_carton = nuevo_carton()
 
 def test_entre_1_y_90():
     assert entre_1_y_90(mi_carton) == 0
