@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/anaolivares2712/AAT-Bingo.svg?branch=master)](https://travis-ci.org/anaolivares2712/AAT-Bingo)
+La verdad es que no se porque me dice failing cuando los test pasaron correctamente
 # Bingo
 Proyecto para la materia de Adaptación al Ambiente de Trabajo del Instituto Politécnico Superior Gral. San Martín.
 Consiste en un generador de cartones de bingo programado en `Python 3`.
