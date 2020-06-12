@@ -196,3 +196,26 @@ def celdas_ocupadas_consecutivas(carton):
                 cont = 0
         cont = 0
     return 0
+
+def tests():
+    while True:
+        carton = nuevo_carton()
+        if (no_menos_15(carton) >= 15
+        and no_mas_15(carton) <= 15
+        and elementos_columnas(carton) == 9
+        and elementos_filas(carton) == 3
+        and entre_1_y_90(carton) == 0
+        and aumentan_hacia_la_derecha(carton) == 0
+        and aumentan_hacia_abajo(carton) == 0
+        and numeros_unicos(carton) == 0
+        and cant_celdas_ocupadas(carton) == 0
+        and matriz(carton) == 0
+        and columnas_tres_celdas_ocupadas(carton) == 0
+        and celdas_vacias_consecutivas(carton) == 0
+        and celdas_ocupadas_consecutivas(carton) == 0):
+            break
+    return carton
+
+carton = tests()
+for fila in carton:
+    print(fila)
