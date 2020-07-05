@@ -1,7 +1,7 @@
 import random
 import math
 
-def nuevo_carton():
+def nuevo_carton(): # Creo nuevo cartón
     cont = 0
 
     carton = [
@@ -57,7 +57,7 @@ def nuevo_carton():
 
     return carton
 
-def no_menos_15(carton):
+def no_menos_15(carton): # No hay menos de 15 celdas ocupadas en el cartón
     cont = 0
     for fila in carton:
         for celda in fila:
@@ -65,7 +65,7 @@ def no_menos_15(carton):
                 cont += 1
     return cont
 
-def no_mas_15(carton):
+def no_mas_15(carton): # No hay mas de 15 celdas ocupadas en el cartón
     cont = 0
     for fila in carton:
         for celda in fila:
@@ -73,14 +73,14 @@ def no_mas_15(carton):
                 cont += 1
     return cont
 
-def elementos_columnas(carton):
+def elementos_columnas(carton): # No pueden existir columnas vacías
     cont = 0
     for i in range(9):
         if(carton[0][i] != 0 or carton[1][i] != 0 or carton[2][i] != 0):
             cont += 1
     return cont
 
-def elementos_filas(carton):
+def elementos_3_columnas(carton): # Cada carton debe tener 3 y solo 3 columnas con una sola celda ocupada
     cont = 0
     for i in range(3):
         for j in range(9):
@@ -89,14 +89,14 @@ def elementos_filas(carton):
                 break
     return cont
 
-def entre_1_y_90(carton):
+def entre_1_y_90(carton): # Los números del cartón se encuentran entre 1 y 90
     for i in range(3):
         for j in range(9):
             if carton[i][j] < 0 or carton[i][j] > 90:
                 return 1
     return 0
 
-def aumentan_hacia_la_derecha(carton):
+def aumentan_hacia_la_derecha(carton): # Los números de las columnas izquierdas son menores que los de las columnas hacia la derecha y cada columna del cartón, contando de izquierda da derecha, tiene números que aumentan por decenas
     for i in range(3):
         izq = 0
         der = 10
@@ -108,7 +108,7 @@ def aumentan_hacia_la_derecha(carton):
             der += 10
     return 0
 
-def aumentan_hacia_abajo(carton):
+def aumentan_hacia_abajo(carton): # Para una misma columna, sus números están ordenados de menor a mayor de arriba hacia abajo
     for j in range(9):
         primero = carton[0][j]
         segundo = carton[1][j]
@@ -127,7 +127,7 @@ def aumentan_hacia_abajo(carton):
                         return 1
     return 0
 
-def numeros_unicos(carton):
+def numeros_unicos(carton): # No hay números repetidos en el cartón
     aux = []
     for i in range(3):
         for j in range(9):
@@ -138,7 +138,7 @@ def numeros_unicos(carton):
                     return 1
     return 0
 
-def cant_celdas_ocupadas(carton):
+def cant_celdas_ocupadas(carton): # Cada fila de un cartón tiene exactamente 5 celdas ocupadas
     cont = 0
     for i in range(3):
         for j in range(9):
@@ -150,7 +150,7 @@ def cant_celdas_ocupadas(carton):
             cont = 0
     return 0
 
-def matriz(carton):
+def matriz(carton): # Cada cartón es una matriz de 3x9
     cont_filas = 0
     cont_columnas = 0
     for fila in carton:
@@ -162,13 +162,13 @@ def matriz(carton):
         cont_columnas = 0
     return 0
 
-def columnas_tres_celdas_ocupadas(carton):
+def columnas_tres_celdas_ocupadas(carton): # No pueden existir columnas con sus tres celdas ocupadas
     for i in range(9):
         if(carton[0][i] != 0 and carton[1][i] != 0 and carton[2][i] != 0):
             return 1
     return 0
 
-def celdas_vacias_consecutivas(carton):
+def celdas_vacias_consecutivas(carton): # En una fila no existen mas de dos celdas vacías consecutivas
     cont = 0
     for i in range(3):
         for j in range(9):
@@ -181,7 +181,7 @@ def celdas_vacias_consecutivas(carton):
         cont = 0 
     return 0
 
-def celdas_ocupadas_consecutivas(carton):
+def celdas_ocupadas_consecutivas(carton): # En una fila no existen mas de dos celdas ocupadas consecutivas
     cont = 0
     for i in range(3):
         for j in range(9):
@@ -196,11 +196,11 @@ def celdas_ocupadas_consecutivas(carton):
 
 def tests():
     while True:
-        carton = nuevo_carton()
+        carton = nuevo_carton() # Creo el cartón y compruebo que es válido
         if (no_menos_15(carton) >= 15
         and no_mas_15(carton) <= 15
         and elementos_columnas(carton) == 9
-        and elementos_filas(carton) == 3
+        and elementos_3_columnas(carton) == 3
         and entre_1_y_90(carton) == 0
         and aumentan_hacia_la_derecha(carton) == 0
         and aumentan_hacia_abajo(carton) == 0
@@ -214,5 +214,6 @@ def tests():
     return carton
 
 carton = tests()
-for fila in carton:
+
+for fila in carton: # Muestro en pantalla el cartón
     print(fila)
