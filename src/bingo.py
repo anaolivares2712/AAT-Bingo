@@ -80,7 +80,7 @@ def elementos_columnas(carton):
             cont += 1
     return cont
 
-def elementos_filas(carton): #Hice un cambio
+def elementos_filas(carton):
     cont = 0
     for i in range(3):
         for j in range(9):
