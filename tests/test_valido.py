@@ -11,8 +11,8 @@ def test_no_mas_15():
 def test_elementos_columnas():
     assert elementos_columnas(mi_carton) == 9
 
-def test_elementos_filas():
-    assert elementos_filas(mi_carton) == 3
+def test_elementos_3_columnas():
+    assert elementos_3_columnas(mi_carton) == 3
 
 def test_entre_1_y_90():
     assert entre_1_y_90(mi_carton) == 0

@@ -1,9 +1,9 @@
 from src.bingo import *
 
 mi_carton2 = (
-        (1,3,0,91,77,86,0,24,0,22),
-        (2,44,0,0,0,86,56,73,36),
-
+        (0,0,0,0,0,0,0,0,0),
+        (0,0,0,0,0,0,0,0,0),
+        (0,0,0,0,0,0,0,0,0)
     )
 
 def test_no_menos_15():
@@ -15,8 +15,8 @@ def test_no_mas_15():
 def test_elementos_columnas():
     assert elementos_columnas(mi_carton2) != 9
 
-def test_elementos_filas():
-    assert elementos_filas(mi_carton2) != 3
+def test_elementos_3_columnas():
+    assert elementos_3_columnas(mi_carton2) != 3
 
 def test_entre_1_y_90():
     assert entre_1_y_90(mi_carton2) != 0
