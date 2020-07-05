@@ -6,7 +6,7 @@ def test_no_menos_15():
     assert no_menos_15(mi_carton) >= 15
 
 def test_no_mas_15():
-    assert no_mas_15(mi_carton) <=15
+    assert no_mas_15(mi_carton) <= 15
 
 def test_elementos_columnas():
     assert elementos_columnas(mi_carton) == 9
