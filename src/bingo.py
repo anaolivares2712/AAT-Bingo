@@ -82,11 +82,13 @@ def elementos_columnas(carton): # No pueden existir columnas vacías
 
 def elementos_3_columnas(carton): # Cada carton debe tener 3 y solo 3 columnas con una sola celda ocupada
     cont = 0
-    for i in range(3):
-        for j in range(9):
-            if carton[i][j] != 0:
-                cont += 1
-                break
+    for columna in range(9):
+        cont2 = 0
+        for fila in range(3):
+            if carton[fila][columna] != 0:
+                cont2 += 1
+        if cont2 == 1:
+            cont += 1
     return cont
 
 def entre_1_y_90(carton): # Los números del cartón se encuentran entre 1 y 90
