@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CARTON DE BINGO</title>
+    <meta charset="UTF-8">
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div class="tabla">
+        {% for fila in carton %}
+        <div class="fila">
+            {% for celda in fila %}
+            {% if celda == 0 %}
+            <div class="vacia">
+            </div>
+            {% else %}
+            <div class="celda">
+                {{ celda }}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
