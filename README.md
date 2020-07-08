@@ -24,9 +24,13 @@ Para clonar el repositorio:
 ```
 git clone https://github.com/anaolivares2712/AAT-Bingo.git
 ```
-Para ejecutar el programa:
+Para ejecutar el programa el consola:
 ```
-python src/bingo.py
+python bingo_consola.py
+```
+Para generar un html con el cartón de bingo:
+```
+python bingo_web.py
 ```
 Para ejecutar los test es necesario tener instalada la herramienta `pytest`, lo cual se puede hacer con el comando:
 ```
@@ -36,7 +40,7 @@ Una vez instalado se pueden ejecutar los test con el comando:
 ```
 pytest
 ```
-## Ejemplo de salida:
+## Ejemplo de salida en consola:
 ```
 [2, 0, 27, 0, 43, 0, 61, 74, 0]
 [0, 14, 29, 0, 49, 54, 0, 79, 0]
