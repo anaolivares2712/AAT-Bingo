@@ -214,8 +214,3 @@ def tests():
         and celdas_ocupadas_consecutivas(carton) == 0):
             break
     return carton
-
-carton = tests()
-
-for fila in carton: # Muestro en pantalla el cartón
-    print(fila)
