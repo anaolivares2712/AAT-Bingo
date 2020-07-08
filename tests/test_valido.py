@@ -1,6 +1,6 @@
 from src.bingo import *
 
-mi_carton = carton
+mi_carton = tests()
 
 def test_no_menos_15():
     assert no_menos_15(mi_carton) >= 15
